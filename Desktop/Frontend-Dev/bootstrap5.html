@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom Blog Homepage</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bs-primary: #ff6f3c;
+            --bs-font-sans-serif: 'Poppins', sans-serif;
+        }
+        h1, h2 {
+            color: var(--bs-primary);
+        }
+        .custom-card {
+            border: 2px solid var(--bs-primary);
+        }
+        .custom-card .btn {
+            background-color: var(--bs-primary);
+            border: none;
+        }
+        .custom-card .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<header class="bg-primary text-white text-center py-4">
+    <h1>My Custom Themed Blog</h1>
+</header>
+
+<div class="container my-5">
+
+    <h2 class="mb-4">Latest Posts</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="card custom-card p-3">
+                <img src="https://picsum.photos/600/300?random=1" class="img-fluid rounded mb-3" alt="Blog Image">
+                <h4 class="card-title">How to Customize Bootstrap</h4>
+                <p class="card-text">Learn how to override Bootstrap theme variables to create your own style easily.</p>
+                <button class="btn btn-primary">Read More</button>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card custom-card p-3">
+                <img src="https://picsum.photos/600/300?random=2" class="img-fluid rounded mb-3" alt="Blog Image">
+                <h4 class="card-title">Top 5 Web Dev Tips</h4>
+                <p class="card-text">Boost your productivity by following these essential web development practices.</p>
+                <button class="btn btn-primary">Read More</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="bg-primary text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 My Blog. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
