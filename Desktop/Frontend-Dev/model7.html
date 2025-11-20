@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Typography and Text Styling</title>
+<style>
+  body{
+    margin:0;
+    padding:40px;
+    font-family:Georgia, serif;
+    background:#f7f7f7;
+    line-height:1.7;
+  }
+
+  h1{
+    font-family:'Arial', sans-serif;
+    font-size:2.2rem;
+    letter-spacing:1px;
+    text-align:center;
+    margin-bottom:30px;
+  }
+
+  article{
+    max-width:800px;
+    margin:auto;
+    font-size:1.1rem;
+    color:#333;
+    text-align:justify;
+  }
+
+  article p{
+    margin-bottom:20px;
+  }
+
+  article p::first-letter{
+    font-size:2rem;
+    font-weight:bold;
+    color:#1e3a8a;
+  }
+
+  article p::first-line{
+    font-weight:bold;
+  }
+
+  mark{
+    background:#fff3a3;
+    padding:2px 4px;
+    border-radius:3px;
+  }
+
+  strong{
+    color:#c026d3;
+  }
+
+  em{
+    color:#0d9488;
+  }
+</style>
+</head>
+<body>
+
+<h1>Typography & Text Styling Showcase</h1>
+
+<article>
+  <p>
+    Typography plays a crucial role in web design. Using different <strong>font families</strong>, weights,
+    and sizes allows designers to create structure and visual interest. Good typography improves
+    readability and enhances user experience.
+  </p>
+
+  <p>
+    Line spacing and letter spacing are essential to maintain balance. Increasing letter-spacing
+    slightly can make headings look elegant, while adjusting line-height ensures paragraphs remain
+    comfortable to read. This paragraph highlights the importance of <em>visual rhythm</em> in a layout.
+  </p>
+
+  <p>
+    Designers often use elements like <mark>highlighted text</mark> to draw attention to specific ideas.
+    Strong emphasis can be achieved using bold or italic text, helping readers focus on important
+    concepts within an article.
+  </p>
+
+  <p>
+    Web typography also involves understanding pseudo-elements. For example, using ::first-letter
+    and ::first-line lets designers add creative touches to paragraphs, making the text feel more
+    dynamic and engaging.
+  </p>
+
+  <p>
+    Ultimately, effective typography strikes a balance between style and clarity. It guides the
+    reader’s eye, enhances communication, and creates a harmonious reading experience.
+  </p>
+</article>
+
+</body>
+</html>
