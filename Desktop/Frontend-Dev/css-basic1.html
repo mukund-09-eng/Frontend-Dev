@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #222;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Responsive Fixed Header */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #222;
+        color: #fff;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;  /* enables wrapping */
+        z-index: 1000;
+    }
+
+    header nav {
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap; /* makes sure links don't get cut */
+    }
+
+    header a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        white-space: nowrap; /* prevents text breaking */
+    }
+
+    main {
+        margin-top: 90px;
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .bio {
+        max-width: 40%;
+        font-size: 1.2rem;
+        line-height: 1.6em;
+    }
+
+    img {
+        width: 250px;
+        height: auto;
+        border-radius: 10%;
+    }
+
+    footer {
+        background: #222;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+        margin-top: auto;
+    }
+
+    /* Extra: Responsive Bio */
+    @media (max-width: 768px) {
+        .bio {
+            max-width: 90%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<header>
+    <h2 style="font-size:1.5rem;">Your Name</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <div class="bio">
+        <p>
+            Hello! I am a passionate web developer who loves creating clean, responsive,
+            and modern websites. I enjoy learning new technologies and turning ideas into
+            functional designs.
+        </p>
+    </div>
+
+    <img src="https://picsum.photos/300" alt="Profile Image">
+</main>
+
+<footer>
+    © 2025 Your Portfolio. All Rights Reserved.
+</footer>
+
+</body>
+</html>
