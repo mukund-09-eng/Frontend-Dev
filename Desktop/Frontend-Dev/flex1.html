@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Personal Portfolio</title>
+<style>
+  body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f4f8;
+  }
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#1e3a8a;
+    color:white;
+  }
+
+  nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:15px;
+    font-weight:bold;
+  }
+
+  .main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    gap:30px;
+  }
+
+  .about{
+    flex:1;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .image-box img{
+    width:100%;
+    max-width:350px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  footer{
+    text-align:center;
+    padding:15px;
+    background:#1f2937;
+    color:white;
+    margin-top:40px;
+  }
+
+  @media(max-width:700px){
+    .main{
+      flex-direction:column;
+      text-align:center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h2>John Doe</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<div class="main">
+  <div class="about">
+    <h2>About Me</h2>
+    <p>Hello! I am a passionate web developer skilled in creating beautiful, responsive, and modern websites using HTML, CSS, and JavaScript. I enjoy solving problems and learning new technologies.</p>
+  </div>
+
+  <div class="image-box">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=60" />
+  </div>
+</div>
+
+<footer>
+  © 2025 John Doe. All rights reserved.
+</footer>
+
+</body>
+</html>
