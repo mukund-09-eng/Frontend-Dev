@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CSS Selectors Practice Page</title>
+<style>
+  
+  p {
+    color:#333;
+    padding:5px 0;
+  }
+
+  
+  .highlight {
+    background:#fde68a;
+    padding:4px;
+  }
+
+  
+  #special {
+    color:#1d4ed8;
+    font-weight:bold;
+  }
+
+  
+  a[href^="https"] {
+    color:#0d9488;
+    font-weight:bold;
+  }
+
+  
+  .box li {
+    color:#7f1d1d;
+  }
+
+  
+  .container > p {
+    background:#e0f2fe;
+    padding:6px;
+  }
+
+  
+  h3 + p {
+    font-style:italic;
+  }
+
+  
+  .note ~ p {
+    background:#fef3c7;
+    padding:6px;
+  }
+</style>
+</head>
+<body style="font-family:Arial, sans-serif; background:#f7f7f7; padding:30px;">
+
+<header style="text-align:center; margin-bottom:25px;">
+  <h1>CSS Selectors Practice Page</h1>
+</header>
+
+<section class="container" style="margin-bottom:30px;">
+  <h3>Element, Class & ID Selectors</h3>
+  <p>This is a normal paragraph.</p>
+  <p class="highlight">This paragraph uses a <strong>class selector</strong>.</p>
+  <p id="special">This paragraph is styled using an <strong>ID selector</strong>.</p>
+</section>
+
+<section style="margin-bottom:30px;">
+  <h3>Attribute Selector</h3>
+  <p>Visit: <a href="https://example.com">Secure Link</a> or <a href="http://test.com">Regular Link</a></p>
+</section>
+
+<section class="box" style="margin-bottom:30px;">
+  <h3>Combinators</h3>
+  <ul>
+    <li>Descendant selector example</li>
+    <li>Styled because nested inside .box</li>
+  </ul>
+
+  <h3>Adjacent Sibling</h3>
+  <p>This paragraph is immediately after the h3 above.</p>
+
+  <p class="note">Note element for general sibling example.</p>
+  <p>Styled because it comes after .note</p>
+  <p>Also styled by the general sibling selector</p>
+</section>
+
+<footer style="text-align:center; padding:15px; background:#1f2937; color:white;">
+  © 2025 CSS Practice Page
+</footer>
+
+</body>
+</html>
