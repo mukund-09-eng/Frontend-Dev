@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Team Members</title>
+<style>
+  body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f4f4f4;
+  }
+
+  .team-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .card{
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex: 1;
+    max-width: 320px;
+  }
+
+  .lead{
+    background: #e8f4ff;
+    border: 2px solid #4ba3ff;
+  }
+
+  h2{
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+  }
+
+  h4{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555;
+  }
+
+  p{
+    margin: 0;
+    color: #444;
+  }
+
+  @media (max-width: 600px){
+    .team-container{
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="team-container">
+  <div class="card lead">
+    <h2>Riya Sharma</h2>
+    <h4>Team Lead</h4>
+    <p>Manages project planning, task delegation, and ensures on-time delivery.</p>
+  </div>
+
+  <div class="card">
+    <h2>Aman Verma</h2>
+    <h4>Developer</h4>
+    <p>Writes clean, efficient code and contributes to feature development.</p>
+  </div>
+
+  <div class="card">
+    <h2>Neha Singh</h2>
+    <h4>Designer</h4>
+    <p>Creates UI/UX layouts, visual assets, and improves overall user experience.</p>
+  </div>
+</div>
+
+</body>
+</html>
