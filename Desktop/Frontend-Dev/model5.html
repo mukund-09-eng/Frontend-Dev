@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Advanced CSS Selectors Demo</title>
+<style>
+  
+  input[type="text"]{
+    padding:8px;
+    border:2px solid #1e3a8a;
+    border-radius:6px;
+  }
+
+  
+  a[href^="https"]{
+    color:#0d9488;
+    font-weight:bold;
+  }
+
+  
+  li:hover{
+    background:#e2e8f0;
+  }
+
+  
+  input:focus{
+    border-color:#9333ea;
+    outline:none;
+  }
+
+  
+  ul li:nth-child(2){
+    color:#be123c;
+    font-weight:bold;
+  }
+
+  
+  h2::before{
+    content:"★ ";
+    color:#f59e0b;
+  }
+
+  h2::after{
+    content:" ★";
+    color:#f59e0b;
+  }
+
+  
+  .group li{
+    padding:6px;
+  }
+
+  
+  .wrapper > p{
+    color:#1e40af;
+  }
+
+  
+  h3 + p{
+    font-style:italic;
+  }
+
+  
+  .note ~ p{
+    background:#fef3c7;
+    padding:5px;
+  }
+</style>
+</head>
+<body style="font-family:Arial, sans-serif; padding:30px;">
+
+<h2>Advanced CSS Selectors</h2>
+
+<h3>Attribute Selectors</h3>
+<input type="text" placeholder="Type here...">
+<br><br>
+<a href="https://example.com">Secure Link</a> •
+<a href="http://example.com">Normal Link</a>
+
+<h3>Pseudo‑classes & Pseudo‑elements</h3>
+<ul class="group" style="list-style:none; padding:0;">
+  <li>Item One</li>
+  <li>Item Two (nth-child)</li>
+  <li>Item Three</li>
+</ul>
+
+<h3>Combinators</h3>
+<div class="wrapper">
+  <p>Child paragraph (direct child)</p>
+  <div class="inner">
+    <p>Nested paragraph (not direct)</p>
+  </div>
+</div>
+
+<p class="note">This is a note paragraph.</p>
+<p>General sibling paragraph #1</p>
+<p>General sibling paragraph #2</p>
+
+</body>
+</html>
