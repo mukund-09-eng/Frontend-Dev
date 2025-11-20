@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filter Cards with Animation</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 40px;
+        font-family: Arial, sans-serif;
+        background: #f0f0f0;
+    }
+
+    .container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        animation: fadeIn 1s ease-in;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        width: 280px;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease;
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        filter: grayscale(100%);
+        transition: filter 0.4s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .card:hover img {
+        filter: none;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 800px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .card {
+            width: 90%;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+        <img src="https://picsum.photos/300/200?random=1" alt="profile">
+        <h3>John Doe</h3>
+        <p>UI/UX Designer</p>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/300/200?random=2" alt="profile">
+        <h3>Sarah Smith</h3>
+        <p>Frontend Developer</p>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/300/200?random=3" alt="profile">
+        <h3>Michael Lee</h3>
+        <p>Creative Artist</p>
+    </div>
+</div>
+
+</body>
+</html>
