@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Responsive Flex + Grid Layout</title>
+<style>
+  body{margin:0;font-family:Arial, sans-serif;background:#f5f5f5;}
+
+  @keyframes fadeUp{
+    0%{opacity:0;transform:translateY(20px);} 
+    100%{opacity:1;transform:translateY(0);} 
+  }
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1e3a8a;
+    color:white;
+    padding:20px;
+  }
+
+  header nav a{
+    margin-left:15px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+  }
+
+  .main{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    padding:20px;
+  }
+
+  .article{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    animation:fadeUp 0.8s ease forwards;
+  }
+
+  .article h2{margin-top:0;}
+
+  .article-boxes{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+  }
+
+  .a-box{
+    flex:1;
+    background:#e8f0ff;
+    padding:15px;
+    border-radius:8px;
+    text-align:center;
+    box-shadow:0 3px 8px rgba(0,0,0,0.12);
+  }
+
+  .sidebar{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  footer{
+    background:#1f2937;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+  }
+
+  @media(max-width:800px){
+    .main{grid-template-columns:1fr;}
+    header{flex-direction:column;gap:10px;}
+    .article-boxes{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h2>MySite</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Blog</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<div class="main">
+  <div class="article">
+    <h2>Welcome to My Responsive Webpage</h2>
+    <p>This webpage demonstrates a combination of Flexbox and Grid, fully responsive and animated.</p>
+
+    <div class="article-boxes">
+      <div class="a-box">Box 1</div>
+      <div class="a-box">Box 2</div>
+      <div class="a-box">Box 3</div>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <h3>Sidebar</h3>
+    <p>Additional content goes here. This area adjusts in responsive view.</p>
+  </aside>
+</div>
+
+<footer>
+  © 2025 MySite. All rights reserved.
+</footer>
+
+</body>
+</html>
