@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Image Filter Gallery</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .item {
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        text-align: center;
+    }
+
+    .item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 6px;
+        transition: filter 0.5s ease;
+    }
+
+    /* Filters */
+    .blur img { filter: blur(3px); }
+    .gray img { filter: grayscale(100%); }
+    .sepia img { filter: sepia(100%); }
+    .bright img { filter: brightness(150%); }
+    .contrast img { filter: contrast(180%); }
+    .hue img { filter: hue-rotate(90deg); }
+
+    /* Remove filter on hover */
+    .item:hover img {
+        filter: none;
+    }
+
+    /* Below 600px → One Column */
+    @media (max-width: 600px) {
+        .gallery {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Responsive Image Filter Gallery</h1>
+
+<div class="gallery">
+
+    <div class="item blur">
+        <img src="https://picsum.photos/400/300?random=1">
+        <p>Blur Effect</p>
+    </div>
+
+    <div class="item gray">
+        <img src="https://picsum.photos/400/300?random=2">
+        <p>Grayscale Effect</p>
+    </div>
+
+    <div class="item sepia">
+        <img src="https://picsum.photos/400/300?random=3">
+        <p>Sepia Effect</p>
+    </div>
+
+    <div class="item bright">
+        <img src="https://picsum.photos/400/300?random=4">
+        <p>Brightness Effect</p>
+    </div>
+
+    <div class="item contrast">
+        <img src="https://picsum.photos/400/300?random=5">
+        <p>Contrast Effect</p>
+    </div>
+
+    <div class="item hue">
+        <img src="https://picsum.photos/400/300?random=6">
+        <p>Hue-Rotate Effect</p>
+    </div>
+
+</div>
+
+</body>
+</html>
