@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>User Interface Components</title>
+<style>
+  body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg, #dbeafe, #f3e8ff);
+    font-family:Arial, sans-serif;
+  }
+
+  .card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+    width:350px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+
+  input[type="text"]{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
+    font-size:1rem;
+    transition:0.3s;
+  }
+
+  input[type="text"]:focus{
+    border-color:#2563eb;
+    outline:none;
+  }
+
+  .btn-row{
+    display:flex;
+    gap:10px;
+  }
+
+  button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+    transition:0.3s;
+  }
+
+  button:hover{
+    background:#1e3a8a;
+  }
+
+  button:active{
+    background:#14255a;
+  }
+
+  select{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
+    font-size:1rem;
+    transition:0.3s;
+  }
+
+  select:focus{
+    border-color:#0d9488;
+    outline:none;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <input type="text" placeholder="Search..." />
+
+  <div class="btn-row">
+    <button>Search</button>
+    <button>Clear</button>
+  </div>
+
+  <select>
+    <option>Select Category</option>
+    <option>Technology</option>
+    <option>Education</option>
+    <option>Design</option>
+  </select>
+</div>
+
+</body>
+</html>
