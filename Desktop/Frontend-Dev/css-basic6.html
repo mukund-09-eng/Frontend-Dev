@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CSS Photo Gallery</title>
+<style>
+  body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    padding:30px;
+  }
+
+  .gallery{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+  }
+
+  .photo{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.4s ease;
+  }
+
+  .photo:hover img{
+    transform:scale(1.1);
+    filter:brightness(70%);
+  }
+
+  .caption{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:15px;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    font-size:1rem;
+    opacity:0;
+    transition:0.4s ease;
+  }
+
+  .photo:hover .caption{
+    opacity:1;
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+
+  <div class="photo">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=60" />
+    <div class="caption">Beach Sunset</div>
+  </div>
+
+  <div class="photo">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60" />
+    <div class="caption">Mountain Lake</div>
+  </div>
+
+  <div class="photo">
+    <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=800&q=60" />
+    <div class="caption">Cliff View</div>
+  </div>
+
+  <div class="photo">
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=60" />
+    <di
