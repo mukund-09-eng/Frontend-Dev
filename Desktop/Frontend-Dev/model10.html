@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Navigation Bar with Hover Transitions</title>
+<style>
+  body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+  }
+
+  nav{
+    background:#1e3a8a;
+    padding:15px 20px;
+  }
+
+  ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+  }
+
+  li a{
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:6px;
+    border:1px solid transparent;
+    transition:all 0.3s ease;
+  }
+
+  li a:hover{
+    background:white;
+    color:#1e3a8a;
+  }
+
+  .active{
+    background:#fff;
+    color:#1e3a8a;
+    border:1px solid #1e3a8a;
+  }
+
+  @media(max-width:700px){
+    ul{
+      flex-direction:column;
+      align-items:center;
+    }
+  }
+
+  footer{
+    background:#1f2937;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<footer>
+  © 2025 My Website. All rights reserved.
+</footer>
+
+</body>
+</html>
