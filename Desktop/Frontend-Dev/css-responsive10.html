@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Dashboard</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #eef1f5;
+        animation: fadeIn 1s ease-in;
+    }
+
+    .layout {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        grid-template-rows: auto 1fr;
+        min-height: 100vh;
+    }
+
+    header {
+        grid-column: 1 / -1;
+        background: #333;
+        color: white;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+    }
+
+    .sidebar {
+        background: #4d4d4d;
+        color: white;
+        padding: 20px;
+    }
+
+    .main {
+        padding: 25px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 750px) {
+        .layout {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto 1fr;
+        }
+        .sidebar {
+            grid-row: 2;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="layout">
+
+    <header>Responsive Dashboard</header>
+
+    <aside class="sidebar">
+        Navigation<br><br>
+        Filters<br>
+        Typography<br>
+        Media Queries<br>
+        Cheat Sheet
+    </aside>
+
+    <main class="main">
+
+        <div class="card">Filters<br><br>Use CSS filters like grayscale, blur, brightness.</div>
+
+        <div class="card">Typography<br><br>Use fluid units and clamp() scaling.</div>
+
+        <div class="card">Media Queries<br><br>Adjust layout for different screen sizes.</div>
+
+        <div class="card">Cheat Sheet Links<br><br>Quick access to responsive CSS concepts.</div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
