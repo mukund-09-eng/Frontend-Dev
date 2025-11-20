@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing Table</title>
+<style>
+  body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    padding:40px;
+  }
+
+  .pricing-container{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+  }
+
+  .plan{
+    background:white;
+    padding:25px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    width:300px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s ease;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .plan:hover{
+    transform:scale(1.05);
+    background:#eaf6ff;
+  }
+
+  .popular{
+    border:2px solid #007bff;
+    background:#f0f6ff;
+  }
+
+  h2{
+    margin-bottom:10px;
+  }
+
+  ul{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+    flex-grow:1;
+  }
+
+  ul li{
+    margin:8px 0;
+  }
+
+  .price{
+    font-size:1.8rem;
+    font-weight:bold;
+    margin:15px 0;
+  }
+
+  a{
+    text-decoration:none;
+    background:#007bff;
+    color:white;
+    padding:10px 20px;
+    border-radius:6px;
+    display:inline-block;
+    transition:0.3s;
+  }
+
+  a:hover{
+    background:#005fcc;
+  }
+
+  @media(max-width:700px){
+    .pricing-container{
+      flex-direction:column;
+      align-items:center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="pricing-container">
+
+  <div class="plan">
+    <h2>Basic</h2>
+    <ul>
+      <li>5 GB Storage</li>
+      <li>Email Support</li>
+      <li>Community Access</li>
+    </ul>
+    <div class="price">₹199/mo</div>
+    <a href="#">Choose Plan</a>
+  </div>
+
+  <div class="plan popular">
+    <h2>Standard</h2>
+    <ul>
+      <li>50 GB Storage</li>
+      <li>Priority Support</li>
+      <li>Advanced Tools</li>
+      <li>Custom Reports</li>
+    </ul>
+    <div class="price">₹499/mo</div>
+    <a href="#">Most Popular</a>
+  </div>
+
+  <div class="plan">
+    <h2>Premium</h2>
+    <ul>
+      <li>200 GB Storage</li>
+      <li>24/7 Support</li>
+      <li>All Premium Features</li>
+      <li>Dedicated Manager</li>
+    </ul>
+    <div class="price">₹999/mo</div>
+    <a href="#">Choose Plan</a>
+  </div>
+
+</div>
+
+</body>
+</html>
