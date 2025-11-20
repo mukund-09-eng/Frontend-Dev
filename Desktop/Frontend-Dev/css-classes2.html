@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tooltip Demonstration</title>
+<style>
+  body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f5f5f5;
+    font-family:Arial, sans-serif;
+  }
+
+  .container{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .tooltip-box{
+    position:relative;
+    font-size:1.2rem;
+    padding:10px 15px;
+    background:white;
+    border-radius:8px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    cursor:pointer;
+  }
+
+  .tooltip{
+    position:absolute;
+    bottom:110%;
+    left:50%;
+    transform:translateX(-50%);
+    background:#1e3a8a;
+    color:white;
+    padding:8px 12px;
+    border-radius:6px;
+    white-space:nowrap;
+    opacity:0;
+    pointer-events:none;
+    transition:0.3s ease-in-out;
+  }
+
+  .tooltip-box:hover .tooltip{
+    opacity:1;
+    bottom:125%;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="tooltip-box">🔍
+    <div class="tooltip">Search Icon Tooltip</div>
+  </div>
+
+  <div class="tooltip-box">Info
+    <div class="tooltip">Information Tooltip</div>
+  </div>
+
+  <div class="tooltip-box">💬
+    <div class="tooltip">Chat Tooltip</div>
+  </div>
+</div>
+
+</body>
+</html>
