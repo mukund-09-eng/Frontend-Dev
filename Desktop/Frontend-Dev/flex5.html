@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing Section</title>
+<style>
+  body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    padding:40px 20px;
+  }
+
+  @keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);} 
+    to{opacity:1; transform:translateY(0);} 
+  }
+
+  .pricing-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
+  }
+
+  .card{
+    background:white;
+    padding:25px;
+    width:270px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    transition:0.3s ease;
+    animation:fadeIn 0.8s ease forwards;
+  }
+
+  .card:hover{
+    transform:translateY(-10px);
+  }
+
+  .highlight{
+    background:#e8f2ff;
+    transform:scale(1.08);
+    border:2px solid #3b82f6;
+  }
+
+  h2{
+    margin-bottom:10px;
+  }
+
+  p{
+    color:#444;
+  }
+
+  @media(max-width:750px){
+    .pricing-container{
+      flex-direction:column;
+    }
+    .highlight{
+      transform:none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="pricing-container">
+  <div class="card">
+    <h2>Basic</h2>
+    <p>₹299 / month</p>
+  </div>
+
+  <div class="card highlight">
+    <h2>Standard</h2>
+    <p>₹599 / month</p>
+  </div>
+
+  <div class="card">
+    <h2>Premium</h2>
+    <p>₹999 / month</p>
+  </div>
+</div>
+
+</body>
+</html>
