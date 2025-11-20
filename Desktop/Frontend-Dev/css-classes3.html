@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Showcase Layout</title>
+<style>
+  body{
+    margin:0;
+    padding:30px;
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+  }
+
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+  }
+
+  figure{
+    position:relative;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    background:white;
+  }
+
+  img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    transition:0.4s ease;
+    display:block;
+  }
+
+  .overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.2);
+    opacity:0;
+    transition:0.4s ease;
+  }
+
+  figure:hover img{
+    transform:scale(1.1);
+    filter:brightness(70%);
+  }
+
+  figure:hover .overlay{
+    opacity:1;
+  }
+
+  figcaption{
+    padding:10px;
+    text-align:center;
+    background:white;
+    font-size:1rem;
+    color:#444;
+  }
+
+  @media(max-width:700px){
+    .gallery{
+      grid-template-columns:1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <figure>
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=60">
+    <div class="overlay"></div>
+    <figcaption>Beach Sunset</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60">
+    <div class="overlay"></div>
+    <figcaption>Mountain Lake</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=60">
+    <div class="overlay"></div>
+    <figcaption>City Lights</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://images.unsplash.com/photo-1519817650390-64a93db5113b?auto=format&fit=crop&w=800&q=60">
+    <div class="overlay"></div>
+    <figcaption>Rainy Window</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=800&q=60">
+    <div class="overlay"></div>
+    <figcaption>Cliff View</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=60">
+    <div class="overlay"></div>
+    <figcaption>Café Street</figcaption>
+  </figure>
+</div>
+
+</body>
+</html>
