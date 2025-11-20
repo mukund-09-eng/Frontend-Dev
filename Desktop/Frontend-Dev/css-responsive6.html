@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive CSS Cheat Sheet</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 40px;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .box {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .box:hover {
+        transform: translateY(-8px);
+        background: #e9f0ff;
+    }
+
+    .title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .desc {
+        color: #444;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 700px) {
+        .box {
+            display: grid;
+            grid-template-columns: 1fr;
+            text-align: left;
+        }
+        .title {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Responsive CSS Cheat Sheet</h1>
+
+<div class="grid">
+
+    <div class="box">
+        <div class="title">Filters</div>
+        <div class="desc">Example: <code>filter: grayscale(100%);</code></div>
+    </div>
+
+    <div class="box">
