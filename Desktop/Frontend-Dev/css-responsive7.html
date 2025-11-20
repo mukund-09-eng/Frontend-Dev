@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combined Responsive Web Demo</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        animation: fadeIn 1s ease-in;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background: #333;
+        color: white;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+    }
+
+    nav a:hover {
+        opacity: 0.6;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .section {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .section:hover {
+        transform: translateY(-6px);
+        background: #eef4ff;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: filter 0.3s ease;
+        filter: grayscale(100%);
+    }
+
+    .gallery img:hover {
+        filter: none;
+    }
+
+    footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 20px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 700px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Responsive Demo</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Docs</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>Image Gallery</h2>
+        <div class="gallery">
+            <img src="https://picsum.photos/300/200?random=1">
+            <img src="https://picsum.photos/300/200?random=2">
+            <img src="https://picsum.photos/300/200?random=3">
+            <img src="https://picsum.photos/300/200?random=4">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>What is Responsive Design?</h2>
+        <p>
+            Responsive design ensures that webpages automatically adapt to
+            different screen sizes. It uses techniques like flexible grids,
+            fluid images, media queries, and scalable typography to maintain
+            readability and usability on all devices.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Cheat Sheet Preview</h2>
+        <p><b>Filters:</b> filter: grayscale(100%)</p>
+        <p><b>Media Queries:</b> @media (max-width: 700px)</p>
+        <p><b>Typography:</b> font-size: clamp()</p>
+        <p><b>Grid:</b> grid-template-columns: repeat(auto-fit...)</p>
+    </div>
+
+</div>
+
+<footer>
+    Contact: info@example.com | All Rights Reserved © 2025
+</footer>
+
+</body>
+</html>
