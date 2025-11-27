@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="name" placeholder="Name">
+<input id="email" placeholder="Email">
+<input id="pass" placeholder="Password" type="password">
+<button id="reg">Register</button>
+<p id="msg"></p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$("#reg").click(function () {
+  let valid = true;
+
+  if (!$("#name").val()) {
+    $("#name").css("border", "2px solid red");
+    valid = false;
+  } else $("#name").css("border", "");
+
+  const email = $("#email").val();
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!emailValid) {
+    $("#email").css("border", "2px solid red");
+    valid = false;
+  } else $("#email").css("border", "");
+
+  if ($("#pass").val().length < 8) {
+    $("#pass").css("border", "2px solid red");
+    valid = false;
+  } else $("#pass").css("border", "");
+
+  if (valid) $("#msg").text("Registration Successful!");
+});
+</script>
+
+</body>
+</html>
