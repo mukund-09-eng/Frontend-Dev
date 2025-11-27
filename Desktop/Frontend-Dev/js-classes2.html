@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Form Validator</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .input-box { margin-bottom: 15px; }
+    input { width: 250px; padding: 8px; border: 2px solid #ccc; border-radius: 5px; }
+    .error { color: red; font-size: 14px; }
+    .valid { border-color: green; }
+    .invalid { border-color: red; }
+  </style>
+</head>
+<body>
+
+<h2>Student Registration Form</h2>
+
+<div class="input-box">
+  <label>Name:</label><br>
+  <input type="text" id="name">
+  <div id="nameError" class="error"></div>
+</div>
+
+<div class="input-box">
+  <label>Email:</label><br>
+  <input type="text" id="email">
+  <div id="emailError" class="error"></div>
+</div>
+
+<div class="input-box">
+  <label>Phone:</label><br>
+  <input type="text" id="phone">
+  <div id="phoneError" class="error"></div>
+</div>
+
+<div class="input-box">
+  <label>Password:</label><br>
+  <input type="password" id="password">
+  <div id="passError" class="error"></div>
+</div>
+
+<script>
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const passInput = document.getElementById("password");
+
+  function validate(input, pattern, errorBox, msg) {
+    if (pattern.test(input.value)) {
+      input.classList.remove("invalid");
+      input.classList.add("valid");
+      errorBox.innerText = "";
+    } else {
+      input.classList.remove("valid");
+      input.classList.add("invalid");
+      errorBox.innerText = msg;
+    }
+  }
+
+  nameInput.addEventListener("input", () => 
+    validate(nameInput, /^[A-Za-z ]+$/, nameError, "Only alphabets allowed")
+  );
+
+  emailInput.addEventListener("input", () => 
+    validate(emailInput, /^[^\s@]+@[^\s@]+\.[^\s@]+$/, emailError, "Invalid email")
+  );
+
+  phoneInput.addEventListener("input", () => 
+    validate(phoneInput, /^[0-9]{10}$/, phoneError, "Must be 10 digits")
+  );
+
+  passInput.addEventListener("input", () => 
+    validate(passInput, /^(?=.*[A-Z])(?=.*[0-9])(?=.*[\W_]).+$/, passError, "1 uppercase, 1 number, 1 special char needed")
+  );
+</script>
+
+</body>
+</html>
