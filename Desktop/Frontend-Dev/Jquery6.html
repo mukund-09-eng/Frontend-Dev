@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="sub">Subscribe</button>
+<button id="unsub">Unsubscribe</button>
+<button id="addTopic">Add Topic</button>
+<div id="topics"></div>
+<div id="msg"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$("#sub").click(() => $("#msg").text("Notifications Enabled"));
+$("#unsub").click(() => $("#msg").text("Notifications Disabled"));
+
+$("#addTopic").click(function () {
+  const t = $("<div class='topic'>New Topic</div>");
+  $("#topics").append(t);
+  t.on("click", () => alert("Topic clicked"));
+});
+
+$(".topic").off("click");
+
+</script>
+</body>
+</html>
