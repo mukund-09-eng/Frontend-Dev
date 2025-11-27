@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Form Builder</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input { padding: 8px; margin-bottom: 10px; width: 250px; display: block; }
+    label { font-weight: bold; }
+    button { padding: 10px 20px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<div id="formContainer"></div>
+<button id="submitBtn">Submit</button>
+
+<script>
+  class FormBuilder {
+    constructor(fields) {
+      this.fields = fields;
+      this.formContainer = document.getElementById("formContainer");
+    }
+
+    render() {
+      let html = "";
+      this.fields.forEach(f => {
+        html += `<label>${f.label}</label><input type="${f.type}" id="${f.label.toLowerCase()}">`;
+      });
+      this.formContainer.innerHTML = html;
+    }
+
+    getFormData() {
+      const data = {};
+      this.fields.forEach(f => {
+        const key = f.label.toLowerCase();
+        data[key] = document.getElementById(key).value;
+      });
+      return data;
+    }
+  }
+
+  const form = new FormBuilder([
+    { type: "text", label: "Username" },
+    { type: "email", label: "Email" },
+    { type: "password", label: "Password" }
+  ]);
+
+  form.render();
+
+  document.getElementById("submitBtn").addEventListener("click", () => {
+    console.log(form.getFormData());
+  });
+</script>
+
+</body>
+</html>
