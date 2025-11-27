@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="product" data-stock="yes" discount="true">
+  Product A <span class="fav">❤️</span>
+  <div class="details" style="display:none;">More details...</div>
+</div>
+
+<div class="product" data-stock="no">
+  Product B <span class="fav">❤️</span>
+  <div class="details" style="display:none;">More details...</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$(".product").click(function () {
+  $(this).css("background", "lightyellow");
+  if ($(this).data("stock") === "no") alert("Out of stock!");
+});
+
+$(".product").hover(
+  function () { $(this).find(".details").show(); },
+  function () { $(this).find(".details").hide(); }
+);
+
+$(".fav").click(function (e) {
+  e.stopPropagation();
+  $(this).toggleClass("selected");
+});
+
+$("[discount='true']").css("border", "2px solid green");
+</script>
+</body>
+</html>
