@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="search" placeholder="Search courses...">
+<div class="course">JavaScript Basics</div>
+<div class="course">Advanced CSS</div>
+<div class="course">React Development</div>
+<p id="count"></p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$("#search").keyup(function () {
+  const val = $(this).val().toLowerCase();
+  let matched = 0;
+
+  $(".course").each(function () {
+    const text = $(this).text().toLowerCase();
+    if (text.includes(val)) {
+      $(this).show().css("background", "yellow");
+      matched++;
+    } else {
+      $(this).hide().css("background", "white");
+    }
+  });
+
+  $("#count").text("Matches: " + matched);
+});
+</script>
+</body>
+</html>
