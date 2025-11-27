@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="faq">
+  <h3 class="q">What is JS?</h3>
+  <p class="a" style="display:none;">A scripting language.</p>
+</div>
+
+<div class="faq">
+  <h3 class="q">What is jQuery?</h3>
+  <p class="a" style="display:none;">A JS library.</p>
+</div>
+
+<input id="ansInput" placeholder="Type answer…">
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$(".q").click(function () {
+  $(this).next().toggle();
+});
+
+$(".q").hover(
+  function () { $(this).css("color", "blue"); },
+  function () { $(this).css("color", "black"); }
+);
+
+$(".q").dblclick(function () {
+  $(".a").hide();
+});
+
+$("#ansInput").focus(function () {
+  $(this).parent().css("background", "lightyellow");
+});
+
+$("#ansInput").blur(function () {
+  $(this).parent().css("background", "white");
+});
+</script>
+</body>
+</html>
