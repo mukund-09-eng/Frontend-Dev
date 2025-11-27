@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+var jq1 = $.noConflict(true);
+jq1(function () {
+  jq1("body").append("<p>Carousel Running (v1)</p>");
+});
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+var jq2 = $.noConflict(true);
+jq2(function () {
+  jq2("body").append("<p>Modal Active (v2)</p>");
+  jq2("p").hover(function () {
+    jq2(this).attr("title", "Tooltip");
+  });
+});
+</script>
+
+</body>
+</html>
