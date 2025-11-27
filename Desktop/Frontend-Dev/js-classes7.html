@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Validation</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input { padding: 8px; width: 250px; display: block; margin-bottom: 10px; }
+    .error { color: red; font-size: 14px; }
+    .success { color: green; font-size: 16px; font-weight: bold; }
+    .valid { border: 2px solid green; }
+    .invalid { border: 2px solid red; }
+  </style>
+</head>
+<body>
+
+<h2>Login Form</h2>
+
+<label>Username</label>
+<input type="text" id="username">
+<div id="userError" class="error"></div>
+
+<label>Password</label>
+<input type="password" id="password">
+<div id="passError" class="error"></div>
+
+<button id="loginBtn">Login</button>
+
+<div id="result"></div>
+
+<script>
+  const user = document.getElementById("username");
+  const pass = document.getElementById("password");
+
+  function validateField(input, pattern, errorBox, msg) {
+    if (pattern.test(input.value)) {
+      input.classList.add("valid");
+      input.classList.remove("invalid");
+      errorBox.innerText = "";
+      return true;
+    } else {
+      input.classList.add("invalid");
+      input.classList.remove("valid");
+      errorBox.innerText = msg;
+      return false;
+    }
+  }
+
+  document.getElementById("loginBtn").addEventListener("click", () => {
+    const u = validateField(user, /^.{5,}$/, userError, "Username must be at least 5 characters");
+    const p = validateField(pass, /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[\W_]).{8,}$/, passError, "Password must have upper, lower, number, special char, min 8 chars");
+
+    if (u && p) {
+      document.getElementById("result").innerHTML = "<div class='success'>Login Successful</div>";
+    } else {
+      document.getElementById("result").innerHTML = "";
+    }
+  });
+</script>
+
+</body>
+</html>
