@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="dept">
+  <h3 class="manager">Manager A</h3>
+  <div class="emp">Emp 1</div>
+  <div class="emp">Emp 2</div>
+</div>
+
+<div class="dept">
+  <h3 class="manager">Manager B</h3>
+  <div class="emp">Emp 3</div>
+  <div class="emp">Emp 4</div>
+</div>
+
+<button id="random">Highlight Siblings</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$(".manager").click(function () {
+  $(this).siblings(".emp").css("background", "lightyellow");
+});
+
+$(".emp").hover(function () {
+  $(this).next().css("color", "blue");
+});
+
+$(".dept").click(function () {
+  $(this).children().css("background", "lightgreen");
+});
+
+$("#random").click(function () {
+  const r = $(".emp").eq(Math.floor(Math.random() * $(".emp").length));
+  r.siblings().css("background", "orange");
+});
+
+$(".manager").dblclick(function () {
+  $(this).parent().find(".emp").toggle();
+});
+</script>
+
+</body>
+</html>
