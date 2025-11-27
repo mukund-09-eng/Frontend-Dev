@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="banner">Big Sale Today!</div>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="slide">Slide Up/Down</button>
+<button id="fade">Fade In/Out</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$("#hide").click(() => $(".banner").hide());
+$("#show").click(() => $(".banner").show());
+$("#slide").click(() => $(".banner").slideToggle());
+$("#fade").click(() => $(".banner").fadeToggle());
+
+setInterval(() => {
+  $(".banner").fadeOut(500).fadeIn(500);
+}, 5000);
+</script>
+
+</body>
+</html>
