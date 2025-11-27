@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="add">Add New Post</button>
+<button id="pre">Prepend Featured</button>
+<button id="remove">Remove Last</button>
+<div id="posts"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$("#add").click(() => $("#posts").append("<div class='post'>New Post</div>"));
+$("#pre").click(() => $("#posts").prepend("<div class='post'>★ Featured Post</div>"));
+$("#remove").click(() => $("#posts .post:last").remove());
+
+$(".post").each(function () {
+  if ($(this).text().includes("JS")) $(this).css("background", "lightgreen");
+});
+</script>
+
+</body>
+</html>
